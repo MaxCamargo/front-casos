@@ -84,9 +84,6 @@ body {
   margin: 15px;
   width: calc((85% / 1) - 10px);
   transition: all 0.2s ease-in-out;
-  /*  @media screen and (max-width: 991px) {
-   width: calc((100% / 2) - 30px);
-   }*/
 }
 @media screen and (max-width: 767px) {
   .cards .card {
@@ -202,9 +199,6 @@ body {
 .accordion p {
   font-weight: bold;
 }
-.accordion .activer {
-  background-color: green;
-}
 
 .panel {
   padding: 0 18px;
@@ -273,90 +267,4 @@ body {
   .panel .panel-content .state .finaldate {
     margin: 0;
   }
-}
-
-/* .content__drop{
-  .drop{
-    transition: all 0.2s ease-in-out;
-      width: 100%;
-      position: relative;
-      margin: 1rem 0;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      color: var(--clr-darkgra);
-      background-color: var(--clr-lightgray);
-      font-size: 1rem;
-      text-decoration: none;
-      font-weight: bold;
-  }
-  .activeDrop {
-    background-color: var(--clr-lightgrayTwo);
-    color: var(--clr-darkgray);
-    transition: all 0.2s ease-in-out;
-    font-weight: bold;
-  }
-  .drop-box{
-    display: flex;
-    align-items: center;
-    padding: 0.2rem 1rem;
-    width: 100%;
-    justify-content: space-between;
-    text-decoration: none;
-
-    .drop-btn{
-      border-radius: 60px;
-      padding: .5rem;
-      background-color: #05157a;
-      color: white;
-      cursor: pointer;
-    }
-    .drop--icon{
-        background-color: var( --clr-warning);
-        height: 40px;
-        width: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        font-size: 1.5rem;
-        border-radius: 10px;
-        margin: 0.2rem;
-    }
-
-  }
-  .dropcontent{
-      padding: 1rem 1rem;
-      display: none;
-      overflow: hidden;
-      background-color: #ffffff;
-      transition: all 0.2s ease-in-out;
-      position: relative;
-      border-radius: 5px;
-      margin-bottom: 1rem;
-    .state{
-      display: flex;
-      justify-content: space-around;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      p{
-        font-size: .8rem;
-        font-weight: 500;
-      }
-      .title{
-        font-size: 1rem;
-        font-weight: bold;
-      }
-      .description{
-        flex-grow: 1;
-        max-width: 300px;
-      }
-      .date{
-        flex-grow: 1;
-      }
-      .finaldate{
-        flex-grow: 1;
-      }
-    }
-  }
-} *//*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
