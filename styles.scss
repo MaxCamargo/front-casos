@@ -81,20 +81,20 @@ body {
   }
 }
 
-//Grid Container
-.cards {
+//Cards container princinal de los casos/btns generales 
+.casos {
   padding: 15px;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
 
-  //Cards
-  .card {
+  //caso acoordion/ desplegable
+  .caso {
     margin: 15px;
     width: calc((85% / 1) - 10px);
     transition: all 0.2s ease-in-out;
 
-  
+
     @media screen and (max-width: 767px) {
       width: 100%;
     }
@@ -114,9 +114,10 @@ body {
       align-items: center;
       color: var(--clr-darkgra);
       font-size: 1.5em;
-      -webkit-box-shadow: -1px 12px 20px -13px rgba(0,0,0,0.22);
-      -moz-box-shadow: -1px 12px 20px -13px rgba(0,0,0,0.22);
-      box-shadow: -1px 12px 20px -13px rgba(0,0,0,0.22);
+      -webkit-box-shadow: -1px 12px 20px -13px rgba(0, 0, 0, 0.22);
+      -moz-box-shadow: -1px 12px 20px -13px rgba(0, 0, 0, 0.22);
+      box-shadow: -1px 12px 20px -13px rgba(0, 0, 0, 0.22);
+
       .button__box {
         display: flex;
         align-items: center;
@@ -160,7 +161,7 @@ body {
           }
         }
 
-        .icon-arrow{
+        .icon-arrow {
           margin-right: 1rem;
         }
       }
@@ -183,7 +184,7 @@ body {
     }
   }
 }
-
+//Acoordion general del desplegable de casos
 .accordion {
   background-color: #eee;
   color: var(--clr-darkgray);
@@ -199,10 +200,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  &:hover{
-     background-color: #ccc; 
+
+  &:hover {
+    background-color: #ccc;
   }
-  .drop--icon{
+
+  .drop--icon {
     background-color: var(--clr-primary-300);
     height: 30px;
     width: 30px;
@@ -214,76 +217,166 @@ body {
     border-radius: 10px;
     margin: 0.2rem;
   }
-  p{
+
+  p {
     font-weight: bold;
   }
 
 }
 
+//contenedor dentro del acoordion general
 .panel {
   padding: 0 18px;
   display: none;
   background-color: var(--clr-white);
   overflow: hidden;
 
-  .btn{
+  .btn {
     display: flex;
     justify-content: flex-end;
     margin: 1rem 0;
-    .drop-btn{
+
+    .drop-btn {
       border-radius: 60px;
       padding: .5rem;
       background-color: #05157a;
       color: white;
       cursor: pointer;
       text-decoration: none;
+
+      &:hover {
+        background-color: var(--clr-primary-300);
+      }
     }
 
   }
 
-  .panel-content{
+  //Container generico del accordion
+  .panel-content {
     display: flex;
     flex-wrap: wrap;
     background-color: white;
     border: solid 1px #e4e4e4;
     border-radius: 3px;
     margin: .5rem 0;
+
+    //Container generico del accordion
     .state {
       display: flex;
       padding: 1rem;
       flex-wrap: wrap;
       width: 100%;
       justify-content: space-between;
-      .description{
+      background-color: #f9e79f;
+
+      .description {
         margin: 0 1rem;
         margin-bottom: .5rem;
+        display: flex;
+        flex-direction: column;
+        flex-basis: auto;
+
         @media screen and (max-width: 767px) {
-          margin: 0;
+          margin: 1rem 0;
+
         }
       }
-      .title{
+
+      .title {
         font-weight: bold;
         font-size: 1rem;
       }
-      p{
+
+      p {
         font-size: .9rem;
       }
-      .date{
+
+      .date {
         margin: 0 1rem;
         margin-bottom: .5rem;
+        display: flex;
+        flex-direction: column;
+        flex-basis: auto;
+
         @media screen and (max-width: 767px) {
-          margin: 0;
+          margin: 1rem 0;
         }
       }
-      .finaldate{
+
+      .finaldate {
         margin: 0 1rem;
         margin-bottom: .5rem;
+
         @media screen and (max-width: 767px) {
           margin: 0;
         }
       }
     }
+
   }
 
+ 
+  .btnGeneral {
+    background: #03157a;
+    padding: .5rem 1.5rem;
+    color: white;
+    border-radius: 60px;
+    cursor: pointer;
+    display: flex;
+    flex-basis: auto;
+    flex-direction: column;
+    align-self: flex-start;
+    &:hover {
+      background-color: var(--clr-primary-300);
+    }
+  }
+  
 }
 
+
+//contenedor y btn General dentro de los acordiones
+.generalContent {
+  padding: 0 18px;
+  display: none;
+  background-color: #fff;
+  margin-top: .5rem;
+  .gc-row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .cg-content{
+      display: flex;
+      flex-basis: auto;
+      flex-wrap: wrap;
+      padding: 1rem;
+      .title-row{
+        width: 40%;
+        @media screen and (max-width: 767px) {
+          width: 100%;
+          margin-bottom: .5rem;
+        }
+        .title{
+          font-size: 1.1rem;
+        }
+      }
+      .paragraph-row{
+        width: 60%;
+        @media screen and (max-width: 767px) {
+          width: 100%;
+        }
+        .paragraph{
+          font-size: .9rem;
+        }
+      }
+    }
+  }
+}
+
+.bg {
+  display: block;
+  width: 100%;
+  background-color: white;
+  height: 500px;
+  border-radius: 5px;
+}
+//Fin contenedor y btn General dentro de los acordiones

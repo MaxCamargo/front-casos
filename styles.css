@@ -74,26 +74,26 @@ body {
   margin-top: 1rem;
 }
 
-.cards {
+.casos {
   padding: 15px;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
 }
-.cards .card {
+.casos .caso {
   margin: 15px;
   width: calc((85% / 1) - 10px);
   transition: all 0.2s ease-in-out;
 }
 @media screen and (max-width: 767px) {
-  .cards .card {
+  .casos .caso {
     width: 100%;
   }
 }
-.cards .card:hover {
+.casos .caso:hover {
   transform: scale(1.01);
 }
-.cards .card .expander {
+.casos .caso .expander {
   transition: all 0.2s ease-in-out;
   width: 100%;
   position: relative;
@@ -105,18 +105,18 @@ body {
   font-size: 1.5em;
   box-shadow: -1px 12px 20px -13px rgba(0, 0, 0, 0.22);
 }
-.cards .card .expander .button__box {
+.casos .caso .expander .button__box {
   display: flex;
   align-items: center;
   padding: 0.8rem;
 }
 @media screen and (max-width: 767px) {
-  .cards .card .expander .button__box {
+  .casos .caso .expander .button__box {
     flex-direction: column;
     width: 100%;
   }
 }
-.cards .card .expander .button__box .icon {
+.casos .caso .expander .button__box .icon {
   background-color: var(--color-icon);
   height: 40px;
   width: 40px;
@@ -128,7 +128,7 @@ body {
   border-radius: 10px;
   margin: 0.5rem;
 }
-.cards .card .expander .button__box .button__title {
+.casos .caso .expander .button__box .button__title {
   display: flex;
   align-items: center;
   margin-left: 1rem;
@@ -136,21 +136,21 @@ body {
   color: --bg-general;
   text-align: left;
 }
-.cards .card .expander .button__box .button__text {
+.casos .caso .expander .button__box .button__text {
   font-size: 0.9rem;
   padding: 0 4.9rem;
   text-align: left;
 }
 @media screen and (max-width: 767px) {
-  .cards .card .expander .button__box .button__text {
+  .casos .caso .expander .button__box .button__text {
     padding: 0 1rem;
     margin-top: 1rem;
   }
 }
-.cards .card .expander .button__box .icon-arrow {
+.casos .caso .expander .button__box .icon-arrow {
   margin-right: 1rem;
 }
-.cards .card .content {
+.casos .caso .content {
   margin-top: 1rem;
   display: none;
   overflow: hidden;
@@ -159,7 +159,7 @@ body {
   position: relative;
   border-radius: 5px;
 }
-.cards .card .active {
+.casos .caso .active {
   background-color: var(--bg-general-100);
   color: var(--clr-white);
   transition: all 0.2s ease-in-out;
@@ -219,6 +219,9 @@ body {
   cursor: pointer;
   text-decoration: none;
 }
+.panel .btn .drop-btn:hover {
+  background-color: var(--clr-primary-300);
+}
 .panel .panel-content {
   display: flex;
   flex-wrap: wrap;
@@ -233,14 +236,18 @@ body {
   flex-wrap: wrap;
   width: 100%;
   justify-content: space-between;
+  background-color: #f9e79f;
 }
 .panel .panel-content .state .description {
   margin: 0 1rem;
   margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-basis: auto;
 }
 @media screen and (max-width: 767px) {
   .panel .panel-content .state .description {
-    margin: 0;
+    margin: 1rem 0;
   }
 }
 .panel .panel-content .state .title {
@@ -253,10 +260,13 @@ body {
 .panel .panel-content .state .date {
   margin: 0 1rem;
   margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-basis: auto;
 }
 @media screen and (max-width: 767px) {
   .panel .panel-content .state .date {
-    margin: 0;
+    margin: 1rem 0;
   }
 }
 .panel .panel-content .state .finaldate {
@@ -267,4 +277,67 @@ body {
   .panel .panel-content .state .finaldate {
     margin: 0;
   }
+}
+.panel .btnGeneral {
+  background: #03157a;
+  padding: 0.5rem 1.5rem;
+  color: white;
+  border-radius: 60px;
+  cursor: pointer;
+  display: flex;
+  flex-basis: auto;
+  flex-direction: column;
+  align-self: flex-start;
+}
+.panel .btnGeneral:hover {
+  background-color: var(--clr-primary-300);
+}
+
+.generalContent {
+  padding: 0 18px;
+  display: none;
+  background-color: #fff;
+  margin-top: 0.5rem;
+}
+.generalContent .gc-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.generalContent .gc-row .cg-content {
+  display: flex;
+  flex-basis: auto;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+.generalContent .gc-row .cg-content .title-row {
+  width: 40%;
+}
+@media screen and (max-width: 767px) {
+  .generalContent .gc-row .cg-content .title-row {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}
+.generalContent .gc-row .cg-content .title-row .title {
+  font-size: 1.1rem;
+}
+.generalContent .gc-row .cg-content .paragraph-row {
+  width: 60%;
+}
+@media screen and (max-width: 767px) {
+  .generalContent .gc-row .cg-content .paragraph-row {
+    width: 100%;
+  }
+}
+.generalContent .gc-row .cg-content .paragraph-row .paragraph {
+  font-size: 0.9rem;
+}
+
+.bg {
+  display: block;
+  width: 100%;
+  background-color: white;
+  height: 500px;
+  border-radius: 5px;
 }/*# sourceMappingURL=styles.css.map */
